@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Dictionary_Maker</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>books_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NewFolder1\**" />
+    <EmbeddedResource Remove="NewFolder1\**" />
+    <None Remove="NewFolder1\**" />
+    <Page Remove="NewFolder1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\books.png" />
+    <None Remove="Images\Icons\cancelicon.png" />
+    <None Remove="Images\Icons\changewordicon.png" />
+    <None Remove="Images\Icons\folder.png" />
+    <None Remove="Images\Icons\foldericon.png" />
+    <None Remove="Images\Icons\jsonicon.png" />
+    <None Remove="Images\Icons\jsonicon2.png" />
+    <None Remove="Images\Icons\langicon.png" />
+    <None Remove="Images\Icons\newfile.png" />
+    <None Remove="Images\Icons\newfileicon.png" />
+    <None Remove="Images\Icons\rtficon.png" />
+    <None Remove="Images\Icons\settingsicon.png" />
+    <None Remove="Images\Icons\xml.png" />
+    <None Remove="Images\Icons\xmlicon.png" />
+    <None Remove="Images\Icons\xmlicon2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\books.png" />
+    <Resource Include="Images\Icons\cancelicon.png" />
+    <Resource Include="Images\Icons\changewordicon.png" />
+    <Resource Include="Images\Icons\foldericon.png" />
+    <Resource Include="Images\Icons\jsonicon.png" />
+    <Resource Include="Images\Icons\jsonicon2.png" />
+    <Resource Include="Images\Icons\langicon.png" />
+    <Resource Include="Images\Icons\newfileicon.png" />
+    <Resource Include="Images\Icons\rtficon.png" />
+    <Resource Include="Images\Icons\settingsicon.png" />
+    <Resource Include="Images\Icons\xmlicon.png" />
+    <Resource Include="Images\Icons\xmlicon2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

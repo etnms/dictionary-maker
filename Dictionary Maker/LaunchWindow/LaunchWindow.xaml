@@ -1,0 +1,48 @@
+﻿<Window x:Class="Dictionary_Maker.LaunchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dictionary_Maker"
+        mc:Ignorable="d"
+        Title="Dictionary Maker" MaxHeight="450" MaxWidth="850" MinHeight="450" MinWidth="850" 
+        WindowStyle="ToolWindow"
+        Closing="Launchindow_Closing">
+
+    <Grid >
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1.5">
+                <GradientStop Color="#5B5F86" Offset="0.0" />
+
+                <GradientStop Color="#3D405B" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.ColumnSpan ="4" Background="#1D393B" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" Height="70" BorderThickness="2" CornerRadius="10">
+        <TextBlock Grid.ColumnSpan ="4" FontSize="40" Foreground="#454849" Background="#81B29A" Width="385" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Height="55">Dictionary Maker</TextBlock>
+        </Border>
+        
+        <Image Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" Source="\Images\books.png"/>
+        
+        <Button Style="{StaticResource RoundCorners}" Grid.Column="3" Grid.Row="1" Click="NewProject_Click" 
+                VerticalAlignment="Center" Height="60" Width="200" Background="#E07A5F" Margin="34,30,33,0" FontSize="18" Name="LaunchNewProject">New project</Button>
+        <Button Style="{StaticResource RoundCorners}" Grid.Column="3" Grid.Row="2" Click="OpenProject_Click" 
+                VerticalAlignment="Center" Height="60" Width="200" Background="#E07A5F" Margin="34,0,33,30" FontSize="18" Name="LaunchOpenProject">Open project</Button>
+        <ComboBox Grid.Column="3" Grid.Row="2" Margin="42,103,41,10" Name="CBLanguage" Foreground="Black" SelectionChanged="LaunchWindowLanguageChange" Text="Choose language">
+            <ComboBoxItem Content="English" Foreground="Black" Name="LaunchEnglish" ></ComboBoxItem>
+            <ComboBoxItem Content="Español" Foreground="Black" Name="LaunchSpanish"></ComboBoxItem>
+            <ComboBoxItem Content="Français" Foreground="Black" Name="LaunchFrench"></ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Window>

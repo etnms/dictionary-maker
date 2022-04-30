@@ -1,0 +1,32 @@
+﻿<Window x:Class="Dictionary_Maker.ErrorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dictionary_Maker"
+        mc:Ignorable="d"
+        Title="Error" Height="150" Width="400" MinHeight="150" MinWidth="400" MaxHeight="150" MaxWidth="400"
+        WindowStyle="ToolWindow">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1.5">
+                <GradientStop Color="#F0EEEE" Offset="0.0" />
+
+                <GradientStop Color="#E0D9D9" Offset="0.25" />
+                <GradientStop Color="#AFAFAF" Offset="0.75"/>
+                <GradientStop Color="#C3C2C2" Offset="1"/>
+                
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.8*" />
+           
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="1"></Border>
+        <TextBlock  Name="ErrorMessage" FontSize="16" TextAlignment="Center" ></TextBlock>
+        <Button Grid.Row="1" Name="ErrorButton" Click="ErrorWindowClose_Click" Margin="120,0,120,20" Background="#C3C8CE">OK</Button>
+    </Grid >
+</Window>

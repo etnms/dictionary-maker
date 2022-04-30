@@ -1,0 +1,10 @@
+.vs/
+.vshistory/
+<<<<<<< HEAD
+./Dictionary Maker/obj/
+./Dictionary Maker/bin/
+=======
+**/bin/
+**/obj/
+>>>>>>> ca7c58c (fix gitignore)
+./Dictionary Maker/vshistory/
